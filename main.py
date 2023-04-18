@@ -6,7 +6,7 @@ from annoy import AnnoyIndex
 from concurrent.futures import ThreadPoolExecutor
 
 # Access the API key value
-api_key = st.secrets['API_KEY']
+api_key = 'E1vtwb38YrYiHwE4iNNkpRd8mH7nwUMzC622ZXIZ'
 
 co = cohere.Client(api_key) 
 
