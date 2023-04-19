@@ -21,7 +21,7 @@ search_index = AnnoyIndex(f=4096, metric='angular')
 search_index.load('search_index.ann')
 
 # load the csv file called cohere_final.csv
-df = pd.read_csv('hecvat_text_final.csv')
+df = pd.read_csv('2021_final.csv')
 
 def search(query, n_results, df, search_index, co):
     # Get the query's embedding
