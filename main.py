@@ -84,21 +84,21 @@ def display(query, results):
     # add a spacer
     st.write('')
     st.write('')
-    st.subheader("Relevant documents")
-    # display the results
-    for i, row in results.iterrows():
-        # display the 'Category' outlined
-        st.markdown(f'**{row["Type"]}**')
-        st.markdown(f'**{row["Category"]}**')
-        st.markdown(f'{row["title"]}')
-        # display the url as a hyperlink
-        # add a button to open the url in a new tab
-        st.markdown(f'[{row["link"]}]({row["link"]})')
-        st.write(row['answer'])
-        # collapse the text
-        with st.expander('Read more'):
-            st.write(row['text'])
-        st.write('')
+    # st.subheader("Relevant documents")
+    # # display the results
+    # for i, row in results.iterrows():
+    #     # display the 'Category' outlined
+    #     st.markdown(f'**{row["Type"]}**')
+    #     st.markdown(f'**{row["Category"]}**')
+    #     st.markdown(f'{row["title"]}')
+    #     # display the url as a hyperlink
+    #     # add a button to open the url in a new tab
+    #     st.markdown(f'[{row["link"]}]({row["link"]})')
+    #     st.write(row['answer'])
+    #     # collapse the text
+    #     with st.expander('Read more'):
+    #         st.write(row['text'])
+    #     st.write('')
 
 # add the if statements to run the search function when the user clicks the buttons
 
