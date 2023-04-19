@@ -11,9 +11,9 @@ api_key = 'E1vtwb38YrYiHwE4iNNkpRd8mH7nwUMzC622ZXIZ'
 co = cohere.Client(api_key) 
 
 # add title
-st.title("Cofinder")
+st.title("HECVAT Search")
 # add a subtitle
-st.subheader("A semantic search tool built for the Cohere community")
+st.subheader("A semantic search tool built with hecvat dataset")
 
 
 # Load the search index
@@ -21,7 +21,7 @@ search_index = AnnoyIndex(f=4096, metric='angular')
 search_index.load('search_index.ann')
 
 # load the csv file called cohere_final.csv
-df = pd.read_csv('cohere_text_final.csv')
+df = pd.read_csv('hecvat_text_final.csv')
 
 def search(query, n_results, df, search_index, co):
     # Get the query's embedding
@@ -102,14 +102,14 @@ def display(query, results):
 
 # add the if statements to run the search function when the user clicks the buttons
 
-query = st.text_input('Ask a question about Cohere')
+query = st.text_input('Ask a question about the hecvat')
 # write some examples to help the user
 
 st.markdown('''Try some of these examples: 
-- What is the Cohere API?
-- What are embeddings?
-- What is the Cohere playground?
-- How can I build a chatbot?''')
+- What is the cloud provider?
+- Where are the servers hosted?
+- What is the authentication requirement for a customer?
+- How can data be transfered?''')
 
 if st.button('Search'):
     results = search(query, 3, df, search_index, co)
